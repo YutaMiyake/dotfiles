@@ -1,0 +1,14 @@
+# show commit-id
+# default 
+# set main-view = date author commit-title:graph=yes,refs=yes
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# http://sue445.hatenablog.com/entry/2014/08/07/015811
+bind main    R !git rebase --autosquash -i %(commit)
+bind diff    R !git rebase --autosquash -i %(commit)
+
+# keys
+bind generic g move-first-line
+
+# + で commit --amend
+bind generic +      !git commit --amend --allow-empty

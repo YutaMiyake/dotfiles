@@ -1,0 +1,15 @@
+Package Control
+ColorPicker
+ColorHighlighter
+slideBarEnforcements
+Theme - Brgrammer
+DocBlockr
+Alignment
+ExportHTML
+git
+GitGutter
+AllAutoComplete
+BracketHighlighter
+Emmet
+SublimeLinter
+Reg​Replace

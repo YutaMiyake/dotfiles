@@ -1,0 +1,36 @@
+[user]
+  name      = YutaMiyake
+  email     = ymiyake@nevada.unr.edu
+
+[alias]
+  s = status -s
+  co = commit
+  cp = cherry-pick
+  ch = checkout
+  re = rebase
+
+  l    = log --pretty=oneline --graph --abbrev-commit
+  lg   = log --graph --all --decorate
+  lgo  = log --graph --all --decorate  --oneline
+
+  # goto a branch which is created if necessary
+  goto = "!f() { git checkout -b $1 2> /dev/null || git checkout $1; }; f"
+
+  # delete merged branches
+  dm = "!git branch --merged | egrep -v 'master' | xargs git branch -d"
+
+  branches = branch -a
+  aliases = config --get-regexp alias
+
+[push]
+  # git push always push the current branch to the remote
+  default = current 
+
+[branch]
+  autosetuprebase = always
+
+[core]
+  editor = vim
+
+[commit]
+  verbose = true
