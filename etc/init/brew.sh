@@ -1,5 +1,3 @@
-# Install command-line tools using Homebrew
-
 # Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
   echo "Installing homebrew..."
@@ -49,6 +47,19 @@ chsh -s /usr/local/bin/zsh
 brew install go
 go get github.com/mattn/qq/...
 
+# node
+brew install nodebrew
+nodebrew install-binary stable
+# npm-check-updates
+# requests
+# express
+# debug
+# moment
+# mkdirp
+# glob
+# underscore
+# webpack
+
 # dev
 brew install bash
 brew install scala
@@ -60,7 +71,6 @@ brew install pyenv-virtualenv
 brew install graphviz
 brew install direnv
 brew install rbenv
-brew install nodebrew
 brew install watch
 brew install peco
 brew install tig
