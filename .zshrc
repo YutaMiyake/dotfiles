@@ -1,3 +1,5 @@
+bindkey -e
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source ~/.zsh/prompt.zsh
