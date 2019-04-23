@@ -42,8 +42,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # gcloud
-source '/Users/a90181/Documents/google-cloud-sdk/path.zsh.inc'
-source '/Users/a90181/Documents/google-cloud-sdk/completion.zsh.inc'
+source '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
 source <(kubectl completion zsh)
 
 # rbenv
