@@ -63,9 +63,11 @@ eval "$(direnv hook zsh)"
 setopt nonomatch
 
 
-
-
-
+function precmd() {
+  if [ ! -z $TMUX ]; then
+    tmux refresh-client -S
+  fi
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

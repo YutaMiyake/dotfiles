@@ -79,15 +79,17 @@ brew install watch
 brew install peco
 brew install tig
 brew install tree
+brew install pstree
 brew install jq
-brew install tmux
-brew install reattach-to-user-namespace
 brew install colordiff
 brew install rmtrash
 brew install nkf
-brew install pstree
 brew install stern
 brew install kubectx
+
+brew install tmux
+brew install reattach-to-user-namespace
+ghq get https://github.com/powerline/fonts.git
 
 # sigil
 curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_$(uname -sm|tr \  _).tgz" \
