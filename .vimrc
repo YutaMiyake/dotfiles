@@ -59,13 +59,6 @@ set paste
 set splitbelow
 set splitright
 
-"split navigations
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
-
-
 "search target in the middle
 nmap n nzz 
 nmap N Nzz 
@@ -81,10 +74,6 @@ set ignorecase
 set smartcase
 "set nowrapscan
 set incsearch
-
-"use background color 
-" autocmd ColorScheme * highlight Normal ctermbg=none
-" autocmd ColorScheme * highlight LineNr ctermbg=none
 
 """"""""""""""""""""""""""""""""""""""""""""
 " ステータスバー関連
@@ -158,18 +147,4 @@ if has('unix') && !has('gui_running')
 "  inoremap <silent> <ESC> <ESC>
   " なぜか矢印キーが効かなくなるのでコメントアウト
 endif
-
-" ステータスバー設定
-"set statusline=%y
-"set statusline+=%f
-"set statusline+=%m
-"set statusline+=%r
-"set statusline+=%h
-"set statusline+=%w
-"set statusline+=%=
-"set statusline+=[FORMAT=%{&ff}]
-"set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
-"set statusline+=[%l/%L行]
-"set statusline+=[%v列]
-"set statusline+=[WC=%{exists('*WordCount')?WordCount():[]}]
 
