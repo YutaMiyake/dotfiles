@@ -14,14 +14,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline' 
 Plugin 'vim-airline/vim-airline-themes' 
-
 Plugin 'altercation/vim-colors-solarized'
-
-Plugin 'kien/ctrlp.vim'
 
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/vimproc.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,3 +34,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" VimFilerをデフォルトのファイラにする
+let g:vimfiler_as_default_explorer=1
+
+noremap <C-W>t :VimFiler -toggle -split -simple -winwidth=45 -no-quit<ENTER>
