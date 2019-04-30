@@ -82,8 +82,11 @@ brew install colordiff
 brew install rmtrash
 brew install nkf
 brew install pstree
+brew install vim --with-override-system-vi
 brew install stern
-brew install vim
+brew install kubectx
+brew install fzf
+brew install ghq
 
 # sigil
 curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_$(uname -sm|tr \  _).tgz" \

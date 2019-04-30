@@ -10,12 +10,14 @@ alias dl="cd ~/Downloads"
 alias h="history"
 alias cls="clear"
 alias g="git"
+alias rm='rmtrash'
+alias df='df -h'
 alias kc="kubectl"
+alias kx="kubectx"
+alias kn="kubens"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias rm='rmtrash'
-alias df='df -h'
 
 # colordiff
 if [[ -x `which colordiff` ]]; then

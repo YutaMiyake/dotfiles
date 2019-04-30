@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source ~/.zsh/prompt.zsh
 source ~/.zsh/aliases.zsh
-source ~/.zsh/peco.zsh
+source ~/.zsh/fzf.zsh
 source ~/.zsh/start-tmux.zsh
 
 # GNU commands
