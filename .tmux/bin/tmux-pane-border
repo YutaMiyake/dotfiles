@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+SHIFT_TO_GIT="#[fg=colour243,bg=colour238,bold]"
+NO_SHIFT_TO_GIT="#[fg=colour243,bg=default,bold]"
+END_OF_GIT="#[fg=colour238,bg=default,bold]"
+GIT_STATUS_OK="#[fg=colour34]"
+GIT_STATUS_FIX="#[fg=colour250]"
+GIT_STATUS_NOT_STAGED="#[fg=colour214]"
+GIT_STATUS_COMMITED="#[fg=colour136]"
+
+if git_status=$(cd $1 && git status 2>/dev/null ); then
+  git_branch=" $(echo $git_status| awk 'NR==1 {print $3}')"
+  case $git_status in
+    *Changes\ not\ staged* ) git_status_bar="${GIT_STATUS_FIX}${git_branch} ${GIT_STATUS_NOT_STAGED}± #[default]" ;;
+    *Changes\ to\ be\ committed* ) git_status_bar="${GIT_STATUS_FIX}${git_branch} ${GIT_STATUS_OK}+ #[default]" ;; 
+    * ) git_status_bar="${GIT_STATUS_OK}${git_branch} ✔ #[default]" ;;
+  esac
+    git_info="${SHIFT_TO_GIT} ${git_status_bar}${END_OF_GIT}"
+else
+  git_info=${NO_SHIFT_TO_FIT}
+fi
+
+directory="$(basename $1)"
+
+echo "#[fg=colour252,bg=colour243,bold] ${directory} ${git_info}#[default]"
