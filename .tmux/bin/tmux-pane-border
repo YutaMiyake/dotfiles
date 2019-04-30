@@ -17,7 +17,7 @@ if git_status=$(cd $1 && git status 2>/dev/null ); then
   esac
     git_info="${SHIFT_TO_GIT} ${git_status_bar}${END_OF_GIT}"
 else
-  git_info=${NO_SHIFT_TO_FIT}
+  git_info=${NO_SHIFT_TO_GIT}
 fi
 
 directory="$(basename $1)"
