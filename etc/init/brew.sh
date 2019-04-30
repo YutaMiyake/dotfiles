@@ -62,6 +62,10 @@ nodebrew install-binary stable
 
 # dev
 brew install bash
+brew install vim --with-override-system-vi
+brew install ghq
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 brew install scala
 brew install sbt
 brew install mysql
@@ -82,11 +86,8 @@ brew install colordiff
 brew install rmtrash
 brew install nkf
 brew install pstree
-brew install vim --with-override-system-vi
 brew install stern
 brew install kubectx
-brew install fzf
-brew install ghq
 
 # sigil
 curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_$(uname -sm|tr \  _).tgz" \
