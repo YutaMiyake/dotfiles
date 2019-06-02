@@ -44,8 +44,10 @@ echo '/usr/local/bin/zsh' >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
 # go
-brew install go
-go get github.com/mattn/qq/...
+brew install goenv
+#github.com/mattn/qq
+#golang.org/x/tools/cmd/goimports
+#golang.org/x/lint/golint 
 
 # node
 brew install nodebrew
