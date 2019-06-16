@@ -71,6 +71,7 @@ function precmd() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export GOENV_DISABLE_GOPATH=1
 export PATH="$HOME/.goenv/bin:$PATH"
 eval "$(goenv init -)"
 
