@@ -4,6 +4,12 @@ set fileformats=unix,dos,mac
 
 source ~/.vim/Vundle.vim
 
+"transparent window
+hi Normal ctermfg=255 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Terminal ctermfg=255 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+
+set termwinsize=7x0
+
 "add line number
 set number
 
