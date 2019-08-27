@@ -12,7 +12,7 @@ alias cls="clear"
 alias g="git"
 alias rm='rmtrash'
 alias df='df -h'
-alias kc="kubectl"
+alias k="kubectl"
 alias kx="kubectx"
 alias kn="kubens"
 alias grep='grep --color=auto'
