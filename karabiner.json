@@ -15,6 +15,25 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
+                     {
+                        "description": "right click",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    { "pointing_button": "button2" }
+                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "control_left + s to select all",
                         "manipulators": [
