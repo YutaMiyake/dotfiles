@@ -4,6 +4,9 @@ set fileformats=unix,dos,mac
 
 source ~/.vim/Vundle.vim
 
+" open automatically quickfix-window after vimgrep
+autocmd QuickFixCmdPost *grep* cwindow
+
 "transparent window
 hi Normal ctermfg=255 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Terminal ctermfg=255 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -158,3 +161,24 @@ if has('unix') && !has('gui_running')
   " なぜか矢印キーが効かなくなるのでコメントアウト
 endif
 
+
+" ctrlp """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" 検索対象の基底をプロジェクトルートディレクトリにする
+let g:ctrlp_working_path_mode = 'ra'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
+let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|\.svn$\|.rvm$|.bundle$\|vendor'
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=25
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+let g:ctrlp_clear_cache_on_exit=0
