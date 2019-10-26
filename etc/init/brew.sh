@@ -96,6 +96,11 @@ brew install reattach-to-user-namespace
 ghq get https://github.com/powerline/fonts.git
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+brew install neovim
+pip3 install -U neovim
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
+pip3 install -U pynvim
 # sigil
 curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_$(uname -sm|tr \  _).tgz" \
     | tar -zxC /usr/local/bin
