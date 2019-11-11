@@ -95,15 +95,31 @@ hook_add = '''
 set rtp+=/usr/local/opt/fzf
 let g:fzf_buffers_jump = 1
 let g:fzf_action = {
-  \ 'ctrl-s': 'vsplit' }
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
 nnoremap <C-f> :GFiles<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-g> :Ag<CR>
 nnoremap <C-r> :History<CR>
-'''
 
-[[plugins]]
-repo = 'mhinz/vim-startify'
+function! s:fzf_neighbouring_files()
+  let current_file =expand("%")
+  let cwd = fnamemodify(current_file, ':p:h')
+  let command = 'ag -g "" -f ' . cwd . ' --depth 0'
+
+  call fzf#run({
+        \ 'source': command,
+        \ 'sink':   'e',
+        \ 'options': '-m -x +s',
+        \ 'window':  'enew' })
+endfunction
+
+""command! FZFNeigh call s:fzf_neighbouring_files()
+
+command! -bang -nargs=? -complete=dir GFiles
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+'''
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
