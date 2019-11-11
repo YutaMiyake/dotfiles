@@ -2,6 +2,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/dein.vim' [[plugins]]
 repo = 'altercation/vim-colors-solarized'
 hook_add = '''
 set background=dark
@@ -100,8 +101,26 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 nnoremap <C-f> :GFiles<CR>
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-g> :Ag<CR>
+nnoremap <C-g> :GGrep<CR>
 nnoremap <C-r> :History<CR>
+
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({ 'dir': systemlist('git rev-parse --show-toplevel')[0] }), <bang>0)
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
