@@ -1,11 +1,11 @@
+export LC_ALL=en_US.UTF-8
+
+setopt nonomatch
+
+# emacs like keybind
 bindkey -e
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-source ~/.zsh/prompt.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/fzf.zsh
-source ~/.zsh/start-tmux.zsh
 
 # GNU commands
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -32,19 +32,19 @@ export PATH=${PYENV_ROOT}/bin:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
-
 # go
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# goenv
+export GOENV_DISABLE_GOPATH=1
+export PATH="$HOME/.goenv/bin:$PATH"
+eval "$(goenv init -)"
+
 # gcloud
 source '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
-source <(kubectl completion zsh)
 
 # rbenv
 eval "$(rbenv init -)"
@@ -52,16 +52,38 @@ eval "$(rbenv init -)"
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# cdr
-autoload -Uz add-zsh-hock
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-
 # direnv
 export EDITOR=vim
 eval "$(direnv hook zsh)"
 
-setopt nonomatch
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups 
+setopt share_history
+setopt append_history
+setopt hist_no_store
+setopt hist_reduce_blanks
+
+
+#zsh
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+
+zplugin light zsh-users/zsh-autosuggestions
+zplugin light zdharma/fast-syntax-highlighting
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
+source ~/.zsh/prompt.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/fzf.zsh
+source ~/.zsh/start-tmux.zsh
 
 function precmd() {
   if [ ! -z $TMUX ]; then
@@ -71,10 +93,6 @@ function precmd() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export GOENV_DISABLE_GOPATH=1
-export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
+if [ $HOME/.zshrc -nt ~/.zshrc.zwc ]; then
+  zcompile ~/.zshrc
+fi

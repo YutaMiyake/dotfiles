@@ -18,6 +18,7 @@ alias kn="kubens"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias vim='nvim'
 
 # colordiff
 if [[ -x `which colordiff` ]]; then
