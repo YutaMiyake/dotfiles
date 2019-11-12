@@ -27,22 +27,10 @@ else
 fi
 export LESS='-R'
 
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-    colorflag="--color"
-else # OS X `ls`
-    colorflag="-G"
-fi
-
-# always ls with color
-alias ls="command ls ${colorflag}"
-export LSCOLORS=gxfxcxdxbxexexabagacad
-
-# List all files colorized in long format
-alias l="ls -lF ${colorflag}"
-
-# List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
+# rust command
+alias ls='exa'
+alias l='exa -lh'
+alias la='exa -ahl --git'
 
 # Apps
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
