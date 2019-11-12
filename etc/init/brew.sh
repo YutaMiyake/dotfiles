@@ -101,6 +101,12 @@ pip3 install -U neovim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 pip3 install -U pynvim
+# rust
+brew install bat
+brew install exa
+brew install fd
+brew install starship
+brew install ripgrep
 # sigil
 curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_$(uname -sm|tr \  _).tgz" \
     | tar -zxC /usr/local/bin
