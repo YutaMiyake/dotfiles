@@ -28,6 +28,9 @@
   # git push always push the current branch to the remote
   default = current 
 
+[remote "upstream"]
+  pushurl = no-pushing
+
 [branch]
   autosetuprebase = always
 
