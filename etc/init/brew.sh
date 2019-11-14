@@ -37,9 +37,7 @@ brew install --with-readline gpg
 
 # zsh
 brew install zsh
-brew install zsh-autosuggestions
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-brew install zsh-completions
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 echo '/usr/local/bin/zsh' >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
