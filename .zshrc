@@ -29,8 +29,6 @@ export PATH="$HOME/anaconda3/bin:$PATH"
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
 export PATH=${PYENV_ROOT}/bin:$PATH
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # go
 export GOROOT=/usr/local/opt/go/libexec
@@ -40,14 +38,10 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # goenv
 export GOENV_DISABLE_GOPATH=1
 export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
 
 # gcloud
 source '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
-
-# rbenv
-eval "$(rbenv init -)"
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -84,6 +78,7 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/fzf.zsh
 source ~/.zsh/start-tmux.zsh
+source ~/.zsh/lazy.zsh
 
 function precmd() {
   if [ ! -z $TMUX ]; then
