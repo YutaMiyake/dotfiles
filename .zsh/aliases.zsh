@@ -1,12 +1,18 @@
-# Navigations
+# navigations
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-# Shortcuts
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
+
+# top repository
+function u()
+{
+    cd ./$(git rev-parse --show-cdup)
+}
+
+# shortcuts
 alias h="history"
 alias cls="clear"
 alias g="git"

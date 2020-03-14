@@ -75,10 +75,10 @@ zplugin light zdharma/fast-syntax-highlighting
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 source ~/.zsh/prompt.zsh
-source ~/.zsh/aliases.zsh
 source ~/.zsh/fzf.zsh
 source ~/.zsh/start-tmux.zsh
 source ~/.zsh/lazy.zsh
+source ~/.zsh/aliases.zsh
 
 function precmd() {
   if [ ! -z $TMUX ]; then
