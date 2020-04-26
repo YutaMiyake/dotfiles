@@ -50,6 +50,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export EDITOR=vim
 eval "$(direnv hook zsh)"
 
+# poetry
+export PATH=$HOME/.poetry/bin:$PATH
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
