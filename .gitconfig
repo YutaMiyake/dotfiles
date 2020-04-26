@@ -20,6 +20,7 @@
 
   # delete merged branches
   dm = "!git branch --merged | egrep -v 'master' | xargs git branch -d"
+  dmo = "!git branch -r --merged master | egrep -v 'master' | sed -e 's% *origin/%%' | xargs -I% git push --delete origin %"
 
   branches = branch -a
   aliases = config --get-regexp alias
