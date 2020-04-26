@@ -1,14 +1,14 @@
-brew install mas
-mas install 497799835 # Xcode (8.2.1)
-mas install 441258766 # Magnet (2.1.0)
-mas install 425424353 # The Unarchiver (3.11.1)
-mas install 411246225 # Caffeine (1.1.1)
-mas install 803453959 # Slack (2.5.2)
-mas install 539883307 # LINE (4.3.1)
-mas install 409183694 # Keynote (6.2.2)
-mas install 408981381 # iPhoto (9.6.1)
-mas install 416285394 # MiniUsage (1.5.0)
-mas install 410628904 # Wunderlist (3.4.7)
+mas install 1122008420 # Table Tool (1.2.1)
+mas install 441258766 # Magnet (2.4.2)
+mas install 425424353 # The Unarchiver (3.11.3)
+mas install 409183694 # Keynote (6.6.2)
+mas install 497799835 # Xcode (10.2)
+mas install 907364780 # Tomato One (1.0.6)
+mas install 1274495053 # Microsoft To Do (2.14)
+mas install 1091189122 # Bear (1.7.10)
+mas install 808647808 # Activity Timer (2.0.5)
+mas install 1013897218 # App Cleaner & Uninstaller (4.9.2)
+mas install 439700005 # CatchMouse (1.2)<Paste>
 
 # manual download list
 # http://natrium11321.hatenablog.com/entry/2013/10/25/204235

@@ -7,19 +7,27 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
+  alfred
+  clipy
+  docker
   dropbox
   evernote
-  google-chrome
   firefox
+  google-chrome
+  intellij-idea
+  iterm2
+  karabiner-elements
+  mapture
+  slack
+  sublime-text3
+  virtualbox
+  visual-studio-code
   utorrent
   appcleaner
-  iterm2
-  sublime-text3
   eclipse-java
   macdown
   microsoft-office
   mactex
-  flux
   tower
   screenflick
   github
@@ -34,14 +42,12 @@ apps=(
   xquartz
   wireshark
   sophos-anti-virus-home-edition
-  cripmenu
   graphviz
-  virtual-box
   vagrant
   texpad
   sequel-pro
+  mysqlworkbench
   postico
-  visual-studio-code
 )
 
 # Manual download list

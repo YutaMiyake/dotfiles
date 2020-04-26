@@ -158,5 +158,9 @@ defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
+# custom keyrepeat
+defaults write -g KeyRepeat -float 1.3
+defaults write -g InitialKeyRepeat -int 10
+
 killall Finder
 

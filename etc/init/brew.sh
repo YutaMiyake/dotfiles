@@ -16,6 +16,9 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+# mac
+brew install mas
+
 # Install GNU commands
 brew install binutils
 brew install coreutils
