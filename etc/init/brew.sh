@@ -38,21 +38,37 @@ brew install --with-default-names gnu-indent
 brew install --with-default-names gnu-which
 brew install --with-readline gpg
 
+# bash
+brew install bash
+
 # zsh
 brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 echo '/usr/local/bin/zsh' >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
-# go
+# pkg manager
 brew install goenv
-#github.com/mattn/qq
-#golang.org/x/tools/cmd/goimports
-#golang.org/x/lint/golint 
 
-# node
+brew install pyenv
+brew install pyenv-virtualenv
+
+brew install pipenv
+
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
 brew install nodebrew
 nodebrew install-binary stable
+
+brew install rbenv
+
+# go
+#github.com/simeji/jid/cmd/ji
+#github.com/mattn/qq
+#golang.org/x/tools/cmd/goimports
+#golang.org/x/lint/golint
+
+# node
 # npm-check-updates
 # requests
 # express
@@ -64,20 +80,13 @@ nodebrew install-binary stable
 # webpack
 
 # dev
-brew install bash
-brew install vim --with-override-system-vi
 brew install ghq
 brew install fzf
 $(brew --prefix)/opt/fzf/install
-brew install scala
-brew install sbt
 brew install mysql
 brew install postgresql
-brew install pyenv
-brew install pyenv-virtualenv
 brew install graphviz
 brew install direnv
-brew install rbenv
 brew install watch
 brew install peco
 brew install tig
@@ -91,23 +100,31 @@ brew install stern
 brew install kubectx
 brew install ffmpeg
 brew install imagemagick
+brew install terminal-notifier
+brew install the_silver_searcher
+brew install youtube-dl
 
 brew install tmux
 brew install reattach-to-user-namespace
 ghq get https://github.com/powerline/fonts.git
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+brew install vim --with-override-system-vi
 brew install neovim
 pip3 install -U neovim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 pip3 install -U pynvim
+brew install ctags
+
+# scala
+brew install scala
+brew install sbt
+
 # rust
 brew install bat
 brew install exa
 brew install fd
 brew install starship
 brew install ripgrep
-# sigil
-curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_$(uname -sm|tr \  _).tgz" \
-    | tar -zxC /usr/local/bin
+
