@@ -52,10 +52,8 @@ apps=(
 
 # Manual download list
 # UML editor (e.g., violet UML editor)
-# Ubuntu, guest addition, extension package for USB
 # MiniUsage
-# iTunes
-# Detune
+# https://github.com/ptsochantaris/trailer
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
