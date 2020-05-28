@@ -2,6 +2,9 @@
   name      = YutaMiyake
   email     = ymiyake@nevada.unr.edu
 
+[url "ssh://git@github.com/"]
+ insteadOf = https://github.com/
+
 [alias]
   s = status -s
   co = commit
@@ -37,6 +40,14 @@
 
 [core]
   editor = vim
+	excludesfile = /Users/a90181/.gitignore_global
+	pager = less -cm
 
 [commit]
   verbose = true
+	template = /Users/a90181/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
