@@ -98,6 +98,7 @@ brew install rmtrash
 brew install nkf
 brew install stern
 brew install kubectx
+brew install kustomize
 brew install ffmpeg
 brew install imagemagick
 brew install terminal-notifier
