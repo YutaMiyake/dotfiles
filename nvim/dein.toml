@@ -1,18 +1,24 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
+repo = 'Shougo/dein.vim' 
 
 [[plugins]]
-repo = 'Shougo/dein.vim' [[plugins]]
 repo = 'altercation/vim-colors-solarized'
 hook_add = '''
-set background=dark
 colorscheme solarized
+set background=dark
+'''
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'
+hook_add = '''
 '''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
 map <C-w>t :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 '''
 
 [[plugins]]
@@ -126,8 +132,6 @@ command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 '''
 
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
 repo  = 'cespare/vim-toml'
