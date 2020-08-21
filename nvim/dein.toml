@@ -3,15 +3,10 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
+
 hook_add = '''
 colorscheme solarized
 set background=dark
-'''
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-build = './install.sh nightly'
-hook_add = '''
 '''
 
 [[plugins]]
