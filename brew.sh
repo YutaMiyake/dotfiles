@@ -33,10 +33,6 @@ brew install gzip
 brew install screen
 brew install wdiff
 brew install wget
-brew install --with-default-names ed
-brew install --with-default-names gnu-indent
-brew install --with-default-names gnu-which
-brew install --with-readline gpg
 
 # bash
 brew install bash
@@ -110,7 +106,6 @@ brew install reattach-to-user-namespace
 ghq get https://github.com/powerline/fonts.git
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-brew install vim --with-override-system-vi
 brew install neovim
 pip3 install -U neovim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
