@@ -14,6 +14,7 @@ apps=(
   evernote
   firefox
   google-chrome
+  google-cloud-sdk
   intellij-idea
   iterm2
   karabiner-elements

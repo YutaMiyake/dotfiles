@@ -40,8 +40,8 @@ export GOENV_DISABLE_GOPATH=1
 export PATH="$HOME/.goenv/bin:$PATH"
 
 # gcloud
-source '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
