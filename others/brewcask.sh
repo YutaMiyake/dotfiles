@@ -5,6 +5,9 @@
 # install brew-cask
 brew install caskroom/cask/brew-cask
 
+# tap
+brew tap dteoh/sqa #sloqquitapps
+
 # Apps
 apps=(
   alfred
@@ -44,9 +47,11 @@ apps=(
   vagrant
   texpad
   sequel-pro
+  slowquitapps
   mysqlworkbench
   postico
 )
+
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
