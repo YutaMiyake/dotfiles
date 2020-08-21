@@ -19,7 +19,6 @@ apps=(
   karabiner-elements
   mapture
   slack
-  sublime-text3
   virtualbox
   visual-studio-code
   utorrent
@@ -36,12 +35,10 @@ apps=(
   lyrics-master
   max
   skype
-  filezilla
   transmit
   1password
   xquartz
   wireshark
-  sophos-anti-virus-home-edition
   graphviz
   vagrant
   texpad
@@ -50,11 +47,6 @@ apps=(
   postico
 )
 
-# Manual download list
-# UML editor (e.g., violet UML editor)
-# MiniUsage
-# https://github.com/ptsochantaris/trailer
-
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "installing apps..."
@@ -62,9 +54,6 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 # fonts
 fonts=(
-  font-crimson-text
-  font-source-sans-pro
-  font-clear-sans
   google-japanese-ime # Hiragana & Alphabet http://www.google.co.jp/ime/index.html
 )
 
