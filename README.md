@@ -28,4 +28,9 @@ cp karabiner.json ~/.config/karabiner/karabiner.json
 defaults write -g KeyRepeat -float 1.3
 defaults write -g InitialKeyRepeat -int 10
 
+## copy mas list and install
+
 ## copy files from old pc: .ssh/ .zsh_history
+
+## set up gcloud
+gcloud init
