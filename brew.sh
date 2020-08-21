@@ -103,7 +103,6 @@ brew install youtube-dl
 
 brew install tmux
 brew install reattach-to-user-namespace
-ghq get https://github.com/powerline/fonts.git
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 brew install neovim

@@ -22,7 +22,14 @@ make deploy
 ## set karabiner-elements
 cp karabiner.json ~/.config/karabiner/karabiner.json
 
-## import soralized.json to iterm2
+## iterm2: import soralized.json
+
+## iterm2: set powerline font
+g clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
 
 ## change key repeat
 defaults write -g KeyRepeat -float 1.3
