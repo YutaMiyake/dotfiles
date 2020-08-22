@@ -15,7 +15,7 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
-                     {
+                    {
                         "description": "right click",
                         "manipulators": [
                             {
@@ -23,14 +23,16 @@
                                     "key_code": "return_or_enter",
                                     "modifiers": {
                                         "mandatory": [
-                                          "shift",
-                                          "control"
+                                            "shift",
+                                            "control"
                                         ]
                                     }
                                 },
                                 "to": [
-                                    { "pointing_button": "button2" }
-                                 ],
+                                    {
+                                        "pointing_button": "button2"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -336,7 +338,30 @@
                     }
                 ]
             },
-            "devices": [],
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 33,
+                        "vendor_id": 1278
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": {
+                                "key_code": "left_control"
+                            }
+                        }
+                    ]
+                }
+            ],
             "fn_function_keys": [
                 {
                     "from": {
@@ -436,6 +461,9 @@
                 }
             ],
             "name": "Default profile",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
