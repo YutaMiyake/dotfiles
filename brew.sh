@@ -44,7 +44,8 @@ echo '/usr/local/bin/zsh' >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
 # pkg manager
-brew install goenv
+# brew install goenv
+git clone https://github.com/syndbg/goenv.git ~/.goenv
 
 brew install pyenv
 brew install pyenv-virtualenv
