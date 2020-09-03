@@ -58,4 +58,5 @@ function tmux_automatically_attach_session()
         fi
     fi
 }
-tmux_automatically_attach_session
+
+alias stmux="tmux_automatically_attach_session"
