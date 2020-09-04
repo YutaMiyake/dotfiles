@@ -37,7 +37,10 @@ defaults write -g InitialKeyRepeat -int 10
 
 ## copy mas list and install
 
-## copy files from old pc: .ssh/ .zsh_history
+## copy files from old pc
+- .ssh/ 
+- .zsh_history
+- trailer settings
 
 ## set up gcloud
 gcloud init
