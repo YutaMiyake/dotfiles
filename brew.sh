@@ -76,6 +76,15 @@ brew install rbenv
 # underscore
 # webpack
 
+
+# k8s
+brew install stern
+brew install kubectx
+brew install kustomize
+brew tap instrumenta/instrumenta
+brew install kubeval
+brew install shyiko/kubesec/kubesec
+
 # dev
 brew install ghq
 brew install fzf
@@ -93,9 +102,7 @@ brew install jq
 brew install colordiff
 brew install rmtrash
 brew install nkf
-brew install stern
-brew install kubectx
-brew install kustomize
+
 brew install ffmpeg
 brew install imagemagick
 brew install terminal-notifier
