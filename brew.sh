@@ -55,6 +55,7 @@ brew install pipenv
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
 brew install nodebrew
+mkdir -p ~/.nodebrew/src
 nodebrew install-binary stable
 
 brew install rbenv
