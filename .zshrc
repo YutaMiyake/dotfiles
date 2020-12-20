@@ -30,6 +30,9 @@ export PATH="$HOME/anaconda3/bin:$PATH"
 export PYENV_ROOT="${HOME}/.pyenv"
 export PATH=$PYENV_ROOT/shims:${PYENV_ROOT}/bin:$PATH
 
+# pipx
+export PATH="$PATH:${HOOME}/.local/bin"
+
 # go
 # export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go

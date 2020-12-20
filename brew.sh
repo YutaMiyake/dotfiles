@@ -43,16 +43,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/i
 echo '/usr/local/bin/zsh' >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
+# python
+brew install pyenv
+brew install pyenv-virtualenv
+brew install pipenv
+brew install pipx
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
 # pkg manager
 # brew install goenv
 git clone https://github.com/syndbg/goenv.git ~/.goenv
-
-brew install pyenv
-brew install pyenv-virtualenv
-
-brew install pipenv
-
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
 brew install nodebrew
 mkdir -p ~/.nodebrew/src
