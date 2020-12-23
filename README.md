@@ -1,4 +1,6 @@
+```
 ## steps
+
 ### clone dotfiles
 mkdir -p ~/ghq/github.com/YutaMiyake/
 cd ~/ghq/github.com/YutaMiyake/
@@ -44,3 +46,16 @@ defaults write -g InitialKeyRepeat -int 10
 
 ## set up gcloud
 gcloud init
+
+## intelliJ
+install plugins
+set goroot to .goenv/versions/xxx
+enable go modules
+go mod download for all modules
+install filewatcher and setup
+
+## vscode
+install code command
+code . to open vscode from terminal
+install go extensions
+```
