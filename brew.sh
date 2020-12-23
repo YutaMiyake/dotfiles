@@ -90,6 +90,10 @@ brew install shyiko/kubesec/kubesec
 brew install ghq
 brew install fzf
 $(brew --prefix)/opt/fzf/install
+
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
 brew install mysql
 brew install postgresql
 brew install graphviz
