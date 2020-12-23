@@ -18,10 +18,13 @@
 
   empty = commit --allow-empty -m 'first commit'
 
-  # goto a branch which is created if necessary
+  # make this a git repo with empty commit
+  this = "!git init && git empty"
+
+  # create or checkout a branch
   goto = "!f() { git checkout -b $1 2> /dev/null || git checkout $1; }; f"
 
-  # delete merged branches
+  # delete merged branches at local (dmo is at origin)
   dm = "!git branch --merged | egrep -v 'master' | xargs git branch -d"
   dmo = "!git branch -r --merged master | egrep -v 'master' | sed -e 's% *origin/%%' | xargs -I% git push --delete origin %"
 
@@ -30,7 +33,10 @@
 
 [push]
   # git push always push the current branch to the remote
-  default = current 
+  default = current
+
+[pull]
+  rebase = true
 
 [remote "upstream"]
   pushurl = no-pushing
