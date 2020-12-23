@@ -40,13 +40,13 @@
 
 [core]
   editor = nvim
-	excludesfile = /Users/a90181/.gitignore_global
-	pager = less -cm
+  excludesfile = /Users/a90181/.gitignore_global
+  pager = less -cm
 
 [commit]
   verbose = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
