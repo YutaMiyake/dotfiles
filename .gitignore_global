@@ -1,0 +1,16 @@
+# OSXs
+._*
+.DS_Store
+
+# Python
+*.pyc
+
+# Vim-related files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# IntelliJ IDEA files:
+.idea/
