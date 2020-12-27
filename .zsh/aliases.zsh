@@ -3,14 +3,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias dt="cd ~/Desktop"
-alias dl="cd ~/Downloads"
-
-# top repository
-function u()
-{
-    cd ./$(git rev-parse --show-cdup)
-}
+alias ci="zi"
+alias cd="z"
 
 # shortcuts
 alias h="history"

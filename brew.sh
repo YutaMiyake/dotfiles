@@ -136,3 +136,4 @@ brew install fd
 brew install starship
 brew install ripgrep
 
+brew install zoxide

@@ -58,6 +58,8 @@ export PATH=$HOME/.poetry/bin:$PATH
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+# rust
+eval "$(zoxide init zsh)"
 
 # history
 HISTFILE=~/.zsh_history
