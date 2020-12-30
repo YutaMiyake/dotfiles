@@ -130,10 +130,11 @@ brew install scala
 brew install sbt
 
 # rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 brew install bat
 brew install exa
 brew install fd
 brew install starship
 brew install ripgrep
-
 brew install zoxide

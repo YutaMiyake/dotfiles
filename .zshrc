@@ -53,6 +53,8 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export EDITOR=vim
 eval "$(direnv hook zsh)"
 
+export PATH=$HOME/.cargo/bin:$PATH
+
 # poetry
 export PATH=$HOME/.poetry/bin:$PATH
 
