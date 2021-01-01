@@ -60,8 +60,6 @@ export PATH=$HOME/.poetry/bin:$PATH
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-# rust
-eval "$(zoxide init zsh)"
 
 # history
 HISTFILE=~/.zsh_history
@@ -83,6 +81,10 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
+
+# rust
+eval "$(zoxide init zsh)" # call after zinit which re-alias zi
 
 source ~/.zsh/prompt.zsh
 source ~/.zsh/fzf.zsh
