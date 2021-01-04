@@ -63,15 +63,17 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # history
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
+HISTSIZE=50000
 SAVEHIST=10000
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups 
+setopt extended_history
+setopt hist_expire_dups_first
 setopt share_history
 setopt append_history
+setopt inc_append_history
 setopt hist_no_store
 setopt hist_reduce_blanks
-
 
 #zsh
 source "$HOME/.zinit/bin/zinit.zsh"
@@ -81,7 +83,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
-
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 # rust
 eval "$(zoxide init zsh)" # call after zinit which re-alias zi
