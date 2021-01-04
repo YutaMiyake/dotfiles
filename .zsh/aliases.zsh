@@ -3,8 +3,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ci="zi"
-alias cd="z"
 
 # shortcuts
 alias h="history"
@@ -19,6 +17,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias vim='nvim'
+alias tf='terraform'
 
 # colordiff
 if [[ -x `which colordiff` ]]; then
@@ -32,6 +31,9 @@ export LESS='-R'
 alias ls='exa'
 alias l='exa -lh'
 alias la='exa -ahl --git'
+alias cat="bat"
+alias ci="zi"
+alias cd="z"
 
 # Apps
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
