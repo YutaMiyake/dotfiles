@@ -50,6 +50,7 @@ apps=(
   slowquitapps
   mysqlworkbench
   postico
+  hyperswitch
 )
 
 
