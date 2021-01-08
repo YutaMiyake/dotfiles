@@ -56,7 +56,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --cask --appdir="/Applications" ${apps[@]}
 
 # fonts
 fonts=(
@@ -65,7 +65,7 @@ fonts=(
 
 # install fonts
 echo "installing fonts..."
-brew cask install ${fonts[@]}
+brew install --cask ${fonts[@]}
 
 # Remove outdated versions from the cellar.
 brew cleanup
