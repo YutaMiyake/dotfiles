@@ -7,55 +7,22 @@ cd ~/ghq/github.com/YutaMiyake/
 git clone https://github.com/YutaMiyake/dotfiles
 cd dotfiles
 
-bash brew.sh
+### setup
+make setup
 
-bash others/brewcask.sh
+### run all scripts
 
-make deploy
+### manual setting
+- input source to Google's
+- custom shortcuts
+- darkmode
+- alfred
+- iterm2 (import soralized.json)
+- install mac apps
 
-## change input source to Google's
-
-## change shortcut
-
-## turn on darkmode
-
-## set alfred
-
-## set karabiner-elements
-cp karabiner.json ~/.config/karabiner/karabiner.json
-
-## iterm2: import soralized.json
-
-## iterm2: set powerline font
-g clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
-
-## change key repeat
-defaults write -g KeyRepeat -float 1.3
-defaults write -g InitialKeyRepeat -int 10
-
-## copy mas list and install
-
-## copy files from old pc
+### copy files from old pc
 - .ssh/ 
 - .zsh_history
 - trailer settings
-
-## set up gcloud
-gcloud init
-
-## intelliJ
-install plugins
-set goroot to .goenv/versions/xxx
-enable go modules
-go mod download for all modules
-install filewatcher and setup
-
-## vscode
-install code command
-code . to open vscode from terminal
-install go extensions
 ```
+
