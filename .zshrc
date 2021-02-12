@@ -2,6 +2,8 @@ export LC_ALL=en_US.UTF-8
 
 setopt nonomatch
 
+export EDITOR=nvim
+
 # emacs like keybind
 bindkey -e
 
@@ -50,7 +52,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # direnv
-export EDITOR=vim
 eval "$(direnv hook zsh)"
 
 export PATH=$HOME/.cargo/bin:$PATH
