@@ -19,10 +19,5 @@ make setup
 - alfred
 - iterm2 (import soralized.json)
 - install mac apps
-
-### copy files from old pc
-- .ssh/ 
-- .zsh_history
-- trailer settings
 ```
 
